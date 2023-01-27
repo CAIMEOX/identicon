@@ -82,7 +82,7 @@ function gen_icon(str, size = 64, fg = [95, 82, 134, 255]) {
 }
 
 function gen_and_save(str, size = 64, file, fg = [95, 82, 134, 255]) {
-    gen_icon().pack().pipe(fs.createWriteStream(file));
+    gen_icon(str, size, fg).pack().pipe(fs.createWriteStream(file));
 }
 
 export { gen_icon, gen_and_save }
